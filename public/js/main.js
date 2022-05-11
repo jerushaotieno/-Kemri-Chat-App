@@ -9,6 +9,7 @@ const { username, room } = Qs.parse(location.search, {
 });
 
 const socket = io();
+const port = process.env.PORT || 5000
 
 // Join chatroom
 socket.emit('joinRoom', { username, room });
